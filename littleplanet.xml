@@ -1,0 +1,244 @@
+<!--
+	krpano - little planet intro example
+-->
+
+<krpano>
+
+	<!--<preview type="SPHERE" url="../images/iconfont-jiazai.png" />-->
+	<!-- pano image -->
+	<!--<image>-->
+		<!--&lt;!&ndash;<cube url="p3/pano_%s.jpg" />&ndash;&gt;-->
+		<!--<sphere url="360img.jpg" />-->
+	<!--</image>-->
+
+	<!--<preview url="pano/p3/preview.jpg" />-->
+	<image>
+		<cube url="pano/p3/pano_%s.jpg" />
+	</image>
+
+	<layer name="text"
+		   url="plugins/textfield.swf"
+		   align="centercenter" x="10" y="10"
+		   keep="true"
+		   html="data:text"
+		   css="data:css"
+		   autowidth="auto"
+		   autoheight="auto"
+		   selectable="false"
+		   background="pink"
+		   border="false"
+		   roundedge="0"
+		   textshadow="1.0"
+		   textshadowrange="7.0"
+		   textshadowangle="45"
+		   textshadowcolor="0x000000"
+		   textshadowalpha="0.6"
+		   handcursor="true"
+	/>
+
+<!-- 	<data name="text">
+			<h1 class="horizons" data-lan="horizon">天域系统</h1>
+			<h2>VR horizon</h2>
+		<div>
+			<a data-lan="horizon1" href="event:loadscene(0, null, MERGE);">衍化系统</a>
+			<a data-lan="horizon2" href="event:loadscene(1, null, MERGE);">感知交互</a>
+			<a data-lan="horizon3" href="event:loadscene(2, null, MERGE);">空间识别</a>
+			<a data-lan="horizon4" href="event:loadscene(3, null, MERGE);">现实映射</a>
+			<a data-lan="horizon5" href="event:loadscene(4, null, MERGE);">组件系统</a>
+		</div>
+
+		<div>
+			<a data-lan="horizon1" href="event:loadscene(0, null, MERGE);">Evolution System</a>
+			<a data-lan="horizon2" href="event:loadscene(1, null, MERGE);">Interactive Perception</a>
+			<a data-lan="horizon3" href="event:loadscene(2, null, MERGE);">Space Identity</a>
+			<a data-lan="horizon4" href="event:loadscene(3, null, MERGE);">Actuality Rebuild</a>
+			<a data-lan="horizon5" href="event:loadscene(4, null, MERGE);">Components System</a>
+		</div>
+
+	</data> -->
+
+	<data name="css">
+		div { display: block; text-align: center; margin-top: 5px;}
+		h1 { color: #ededed; font-size: 3.65rem; font-family:微软雅黑 Light; text-align: center; font-weight: 600; margin-bottom: 10px; padding: 0;}
+		h2 { color: #ededed; font-size: 2rem; font-family:微软雅黑 Light; text-align: center; font-weight: 600; margin-bottom: 3rem; padding: 0;}
+		a  { color: #ededed; font-size: 1.2rem; font-family:微软雅黑 Light; text-align: center; font-weight: 600; margin: 4px; padding: 0;text-decoration:none;}
+
+	</data>
+
+	<plugin name="snow" zorder="1"
+			url="%SWFPATH%/plugins/snow.swf"
+			alturl="%SWFPATH%/plugins/snow.js"
+			floor="0.7"
+			onloaded="snowballs();"
+
+	/>
+
+	<action name="defaultsnow">
+		set(plugin[snow].mode,          snow);
+		set(plugin[snow].blendmode,     normal);
+		set(plugin[snow].flakes,        4000);
+		set(plugin[snow].color,         0xFFFFFF);
+		set(plugin[snow].speed,         1.0);
+		set(plugin[snow].shake,         4.0);
+		set(plugin[snow].speedvariance, 2.0);
+		set(plugin[snow].spreading,     4.0);
+		set(plugin[snow].wind,          0.0);
+	</action>
+	<action name="snowballs">
+		set(plugin[snow].mode,          image);
+		set(plugin[snow].imageurl,      '%CURRENTXML%/snowball.png');
+		set(plugin[snow].blendmode,     normal);
+		set(plugin[snow].flakes,        2000);
+		set(plugin[snow].imagescale,    0.5);
+		set(plugin[snow].speed,         1.0);
+		set(plugin[snow].shake,         4.0);
+		set(plugin[snow].speedvariance, 2.0);
+		set(plugin[snow].spreading,     2.0);
+		set(plugin[snow].wind,          2.0);
+	</action>
+	<events name="nadirlogorotation"
+			onviewchange="if(hotspot[nadirlogo].rotatewithview, set(hotspot[nadirlogo].rotate,get(view.hlookat)) );"
+	/>
+	<!--<hotspot name="nadirlogo"-->
+			 <!--url="webgl_logo.png"-->
+			 <!--ath="90"-->
+			 <!--atv="190"-->
+			 <!--distorted="true"-->
+			 <!--scale="1.0"-->
+			 <!--rotate="0.0"-->
+			 <!--rotatewithview="false;"-->
+
+	<!--/>-->
+	<!--<hotspot name="nadirlogo"-->
+			 <!--url="txt1.png"-->
+			 <!--ath="0"-->
+			 <!--atv="90"-->
+			 <!--distorted="true"-->
+			 <!--scale="1.0"-->
+			 <!--rotate="0.0"-->
+			 <!--rotatewithview="false"-->
+			 <!--onclick="switch(rotatewithview); invalidatescreen();"-->
+	<!--/>-->
+	<!--<hotspot name="nadirlogo1"-->
+			 <!--url="star.png"-->
+			 <!--ath="0"-->
+			 <!--atv="180"-->
+			 <!--distorted="true"-->
+			 <!--scale="1.0"-->
+			 <!--rotate="0.0"-->
+			 <!--rotatewithview="false"-->
+			 <!--onclick="switch(rotatewithview); invalidatescreen();"-->
+	<!--/>-->
+	<!--<hotspot name="nadirlogo2"-->
+			 <!--url="txt2.png"-->
+			 <!--ath="80"-->
+			 <!--atv="180"-->
+			 <!--distorted="true"-->
+			 <!--scale="1.0"-->
+			 <!--rotate="180"-->
+			 <!--rotatewithview="false"-->
+			 <!--onclick="switch(rotatewithview); invalidatescreen();"-->
+	<!--/>-->
+	<!--<hotspot name="nadirlogo3"-->
+			 <!--url="txt6_1.png"-->
+			 <!--ath="80"-->
+			 <!--atv="220"-->
+			 <!--distorted="true"-->
+			 <!--scale="1.0"-->
+			 <!--rotate="180"-->
+			 <!--rotatewithview="false"-->
+			 <!--onclick="switch(rotatewithview); invalidatescreen();"-->
+	<!--/>-->
+	<!--<hotspot name="nadirlogo4"-->
+			 <!--url="txt6_2.png"-->
+			 <!--ath="180"-->
+			 <!--atv="20"-->
+			 <!--distorted="true"-->
+			 <!--scale="0.5"-->
+			 <!--rotate="0.0"-->
+			 <!--rotatewithview="false"-->
+			 <!--onclick="switch(rotatewithview); invalidatescreen();"-->
+	<!--/>-->
+	<!--<hotspot name="nadirlogo5"-->
+			 <!--url="txt8.png"-->
+			 <!--ath="90"-->
+			 <!--atv="0"-->
+			 <!--distorted="true"-->
+			 <!--scale="1.0"-->
+			 <!--rotate="0.0"-->
+			 <!--rotatewithview="false"-->
+			 <!--onclick="switch(rotatewithview); invalidatescreen();"-->
+	<!--/>-->
+	<!--<hotspot name="nadirlogo6"-->
+			 <!--url="txt9.png"-->
+			 <!--ath="250"-->
+			 <!--atv="50"-->
+			 <!--distorted="true"-->
+			 <!--scale="1.0"-->
+			 <!--rotate="0.0"-->
+			 <!--rotatewithview="false"-->
+			 <!--onclick="switch(rotatewithview); invalidatescreen();"-->
+	<!--/>-->
+	<!--<hotspot name="nadirlogo7"-->
+			 <!--url="txt6_4.png"-->
+			 <!--ath="50"-->
+			 <!--atv="250"-->
+			 <!--distorted="true"-->
+			 <!--scale="1.0"-->
+			 <!--rotate="180"-->
+			 <!--rotatewithview="false"-->
+			 <!--onclick="switch(rotatewithview); invalidatescreen();"-->
+	<!--/>-->
+	<!--onclick="switch(rotatewithview); invalidatescreen();"-->
+	<!-- startup view settings for 'little planet view' (stereographic=true + fisheye=1.0 + fov>120 + vlookat>70) -->
+	<view stereographic="true"
+		  fisheye="1.0"
+		  fov="155"
+		  fovtype="VFOV"
+		  fovmax="150"
+		  hlookat="-60"
+		  vlookat="77"
+		  />
+
+
+
+	<!-- fisheye and little planets projections are needing more cpu rendering performance,
+		 to reduce the cpu need and get better performance and frame rate, switch to Flash9
+		 rendering while in fisheye/littleplanet/stereographic mode -->
+	<!--创建地图层-->
+	<!--<display flash10="true" details="24" mipmapping="auto" loadwhilemoving="auto" />-->
+
+	<!--添加地图控件-->
+	<!--<layer name="mapcontainer" keep="true" type="container" bgcolor="#000" bgalpha='0.5' align="righttop" x="20" y="80" width="200" height="200"/>-->
+
+	<!--控制场景自动旋转-->
+	<autorotate enabled="true"
+				waittime="0.2"
+				speed="5.0"
+			/>
+
+	<!-- when the loading is done, wait 2 seconds and then start with the animation to an normal view -->
+	<events onloadcomplete="delayedcall(2.0, normalview());" />
+
+	<!--<layer name="webgl" url="webgl_logo.png"/>-->
+
+	<action name="normalview">
+		tween(view.hlookat, -40, 2.5, easeInOutQuad);
+		tween(view.vlookat, -35, 2.5, easeInOutQuad);
+		tween(view.fov,     85,  2.5, easeInOutQuad);
+		tween(view.fisheye, 0.0, 2.5, easeInOutQuad);
+		wait(2.7);
+		set(display.flash10, on);
+		showtext('[b][i][/i][/b]', infostyle)
+	</action>
+
+
+	<!-- showtext() textstyle -->
+	<textstyle name="infostyle"
+			   origin="center" edge="center" yoffset="-39" textalign="center" background="false" border="false"
+			   fontsize="40" textcolor="0xFFFFFF" bold="false" effect="glow(0xFFFFFF,0.7,4,2);glow(0x000000,1,4,2);dropshadow(3,45,0x000000,2,0.6);"
+			   showtime="5.0" fadeintime="1.0" fadetime="1.0"
+			/>
+
+
+</krpano>

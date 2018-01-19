@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>EBI</title>
+    <meta name="viewport" content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <!-- <link rel="icon" href="../images/.ico"> -->
+    <link rel="P3Pv1" href="/w3c/p3p.xml" />
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <style type="text/css" media="screen">
+    .font {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    </style>
+</head>
+
+<body>
+    <script src="embedviewer.js"></script>
+    <div id="krpano" style="width:100%;height:100%;position: absolute;z-index: 0;">
+        <noscript>
+            <table style="width:100%;height:100%;">
+                <tr style="vertical-align:middle;">
+                    <td>
+                        <div style="text-align:center;">ERROR:
+                            <br/>
+                            <br/>Javascript not activated
+                            <br/>
+                            <br/>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </noscript>
+        <script>
+        function onreadyFunction() {
+            setTimeout(function() {
+                document.getElementsByClassName('fontTitle')[0].style.display = 'none'
+            }, 5000);
+            setTimeout(function() {
+                document.getElementsByClassName('container')[0].style.opacity = "1";
+            }, 6000);
+        }
+        embedpano({ swf: "krpano.swf", xml: "littleplanet.xml", target: "krpano", html5: (document.domain ? "prefer" : "auto"), passQueryParameters: true, mwheel: true, onready: onreadyFunction });
+        </script>
+    </div>
+    <div class="font">
+        <div class="fontTitle">
+            音你所想，策动未来
+        </div>
+    </div>
+    <div class="container">
+        <div class="title">
+            音你所想，策动未来
+        </div>
+        <div class="content">
+            <div class="item">
+                <div class="innerBox">
+                    <div class="innerImg active">
+                        <p>小熊
+                            <br>十名</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="innerBox">
+                    <div class="innerImg active">
+                        <p>小熊1
+                            <br><span>共十名</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="innerBox">
+                    <div class="innerImg noActive">
+                        <p>小熊1
+                            <br><span>共十名</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="innerBox">
+                    <div class="innerImg noActive">
+                        <p>小熊1
+                            <br><span>共十名</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="innerBox">
+                    <div class="innerImg noActive">
+                        <p>小熊1
+                            <br><span>共十名</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="innerBox">
+                    <div class="innerImg noActive">
+                        <p>小熊1
+                            <br><span>共十名</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="innerBox">
+                    <div class="innerImg noActive">
+                        <p>小熊1
+                            <br><span>共十名</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="innerBox">
+                    <div class="innerImg noActive">
+                        <p>小熊1
+                            <br><span>共十名</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pop" style="display: block;">
+        <div class="pops">
+            <div class="popsTop">
+                <div class="return">
+                    <button class="btn" style="margin-top: 10px;" type="">返回</button>
+                </div>
+                <div class="popTitle">
+                    <div class="checkItem" id="newEmployee">
+                        <div class="checkboxIcon btn">
+                            <span>新员工</span>
+                            <div style="display: block;"></div>
+                        </div>
+                    </div>
+                    <div class="checkItem active" id="oldEmployee">
+                        <div class="checkboxIcon btn">
+                            <span>老员工</span>
+                            <div class="checked" style="display: block;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="awardType">奖品</div>
+            </div>
+            <div class='popbox lines'>
+                <div class="luckDraw">
+                    <div class="drawTop">
+                        <div class="drawTopbox">
+                            <div class="drawBoxInput">
+                                <label for="personNumber">抽奖人数：</label>
+                                <input type="number" class="inputText" name="" id="personNumber" placeholder="输入抽奖人数">
+                            </div>
+                            <div class="rotation">
+                                <div class="rotationItem " style="border-radius: 10px 0 0 0"><img src="./image/2.jpg" alt=""></div>
+                                <div class="rotationItem"><img src="./image/2.jpg" alt=""></div>
+                                <div class="rotationItem" style="border-radius: 0 10px 0 0"><img src="./image/2.jpg" alt=""></div>
+                                <div class="rotationItem"><img src="./image/2.jpg" alt=""></div>
+                                <div class="" style="padding: 4px; background-color: #fff;">
+                                    <button class="btn btn-start box-shadow" id="start" style="" type="button" value="">Start</button>
+                                </div>
+                                <div class="rotationItem"><img src="./image/2.jpg" alt=""></div>
+                                <div class="rotationItem" style="border-radius: 0 0 0 10px"><img src="./image/2.jpg" alt=""></div>
+                                <div class="rotationItem"><img src="./image/2.jpg" alt=""></div>
+                                <div class="rotationItem active" style="border-radius: 0 0 10px 0"><img src="./image/2.jpg" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="drawContent">
+                            <div class="winningTitle lines">中奖信息</div>
+                            <div class="winningMsg">
+                                <div class="popbg"></div>
+                                <div class="msgList">
+                                    <div class="personItem">
+                                        <div class="personLogo">
+                                            <img src="./image/2.jpg" alt="">
+                                        </div>
+                                        <p>Jack.li</p>
+                                    </div>
+                                    <!--    <div class="personItem">
+                                        <div class="personLogo">
+                                            <img src="./image/logoH.png" alt="">
+                                        </div>
+                                        <p>Analytics</p>
+                                    </div>
+                                    <div class="personItem">
+                                        <div class="personLogo">
+                                            <img src="./image/logo1.png" alt="">
+                                        </div>
+                                        <p>Analytics</p>
+                                    </div> -->
+                                    <!--  <div class="personItem">
+                                        <div class="personLogo">
+                                            <img src="./image/logo1.png" alt="">
+                                        </div>
+                                        <p>Analytics</p>
+                                    </div> -->
+                                    <!-- <div class="personItem">
+                                        <div class="personLogo">
+                                            <img src="./image/logoH.png" alt="">
+                                        </div>
+                                        <p>Analytics</p>
+                                    </div>
+                                    <div class="personItem">
+                                        <div class="personLogo">
+                                            <img src="./image/logoH.png" alt="">
+                                        </div>
+                                        <p>Analytics</p>
+                                    </div>
+                                    <div class="personItem">
+                                        <div class="personLogo">
+                                            <img src="./image/logoH.png" alt="">
+                                        </div>
+                                        <p>Analytics</p>
+                                    </div>
+                                    <div class="personItem">
+                                        <div class="personLogo">
+                                            <img src="./image/logoH.png" alt="">
+                                        </div>
+                                        <p>Analytics</p>
+                                    </div>
+                                    <div class="personItem">
+                                        <div class="personLogo">
+                                            <img src="./image/logoH.png" alt="">
+                                        </div>
+                                        <p>Analytics</p>
+                                    </div>
+                                    <div class="personItem">
+                                        <div class="personLogo">
+                                            <img src="./image/logoH.png" alt="">
+                                        </div>
+                                        <p>Analytics</p>
+                                    </div>
+                                    <div class="personItem">
+                                        <div class="personLogo">
+                                            <img src="./image/logoH.png" alt="">
+                                        </div>
+                                        <p>Analytics</p>
+                                    </div>
+                                    <div class="personItem">
+                                        <div class="personLogo">
+                                            <img src="./image/logoH.png" alt="">
+                                        </div>
+                                        <p>Analytics</p>
+                                    </div> -->
+                                    <div class="personItem">
+                                        <div class="personLogo">
+                                            <img src="./image/logoH.png" alt="">
+                                        </div>
+                                        <p>Analytics</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="jquery.js"></script>
+    <script>
+    var employeeStatus = ''; //获取当前新老员工的状态
+    var prize = ''; //保存当前所抽奖项
+    var winners = 0; //保存当前需要抽取的人员数量
+
+    var item = $('.item .noActive');
+
+    //所有奖项的点击
+    item.each(function(index, el) {
+        $(el).on('click', function() {
+            $('.pop').css('display', 'block')
+        });
+    });
+
+    // 返回按钮
+
+    $('.return').on('click', function() {
+        $('.pop').css('display', 'none');
+    });
+
+    var timer = null;
+
+    $('#start').on('click', function() {
+
+        var length = $('.rotationItem').length;
+        var i = 0;
+
+        if ($(this).html() == "Start") {
+
+            $(this).addClass('active').html('End');
+
+            timer = setInterval(function() {
+
+                i = ++i >= length ? 0 : i;
+                console.log(i)
+                $('.rotationItem').eq(i).addClass('active').siblings().removeClass('active');
+                
+            }, 300);
+
+        } else {
+
+            $('#start').removeClass('active').html('Start');
+
+            clearInterval(timer);
+
+        }
+    });
+
+
+    // 新老员工的点击切换状态
+    $('.checkItem').on('click', function() {
+
+        var id = $(this).attr('id');
+
+        if (id == "newEmployee") {
+
+            employeeStatus = "newEmployee";
+
+        } else if (id == "oldEmployee") {
+
+            employeeStatus = "oldEmployee";
+
+        }
+
+        $(this).addClass('active').siblings().removeClass('active');
+
+    })
+    </script>
+</body>
+
+</html>
